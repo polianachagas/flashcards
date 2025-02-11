@@ -19,11 +19,11 @@ public class Deck {
 	private String title;
 	
 	@ManyToOne
-	@JoinColumn(name = "user_id", nullable = false)
-	private User user;
+	@JoinColumn(name = "users", nullable = false)
+	private Users users;
 	
 	@ManyToOne
-    @JoinColumn(name = "category_id", nullable = true)
+    @JoinColumn(name = "category", nullable = true)
 	private Category category;
 	
 	@OneToMany(mappedBy = "deck", cascade = CascadeType.ALL, orphanRemoval = true)

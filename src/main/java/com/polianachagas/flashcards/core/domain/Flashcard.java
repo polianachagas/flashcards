@@ -17,7 +17,7 @@ public class Flashcard {
 	private String back;
 	
 	@ManyToOne
-	@JoinColumn(name = "card_id", nullable = false)
+	@JoinColumn(name = "deck", nullable = false)
 	private Deck deck;
 
 	public Long getId() {
